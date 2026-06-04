@@ -18,10 +18,3 @@ jobs:
         with:
           path: ibox_x86.tar.gz
           name: ibox-x86
-      - name: 发布Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ibox-${{ github.run_number }}
-          files: ibox_x86.tar.gz
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
